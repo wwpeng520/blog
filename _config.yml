@@ -78,7 +78,8 @@ theme: landscape
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo:
+  repo: git@github.com:wwpeng520/article-blog-hexo.git
+  branch: master
 
 # hexo-admin authentification
 # admin:
