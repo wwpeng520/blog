@@ -12,8 +12,8 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://wenpeng.wang/blog
-root: /blog/
+url: http://wenpeng.tech
+root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
@@ -78,8 +78,8 @@ theme: landscape
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:wwpeng520/articles-blog-hexo.git
-  branch: master
+  repo: git@45.76.158.135:/data/blog/git/blog.git # 此部分修改为你自己的登陆账号和域名，冒号后面为设置的裸仓库的地址
+  # branch: master
 
 # hexo-admin authentification
 # admin:
