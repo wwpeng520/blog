@@ -10,9 +10,11 @@ tags:
 - 前端技术
 ---
 
-![React Native](/images/common/react-native-logo.png)
+![React Native](/images/main/react-native-logo.png)
 
 使用React Native开发APP小半年了，从开始的react-native+redux+react-redux杂糅在一起到现在尝试到react-native+dva+typescript+antd-mobile，感觉才有点算得上是易维护、易拓展到工程。由于typescript语言的优势，写出的代码也可避免很多低级且不易察觉的错误。
+
+<!-- more -->
 
 最初需要判断一个页面是否是APP显示的当前页面是因为react-navigation版本从v1.0.0-beta23（应该是从这个版本开始）到v1.1.2之间很长的时间内没有懒加载，这样导致项目中首次需要同时加载多个页面（使用react-navigation的TabNavigator）。现在react-navigation版本已经更新到v1.3.2版本了，已经原生默认是懒加载了，不需要懒加载还得需要设置lazy为false才行（但是因为项目中使用了dva，而dva是基于redux封装的，这里又有个坑，后面再细说吧）。
 
