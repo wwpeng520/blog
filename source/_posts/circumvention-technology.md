@@ -4,6 +4,7 @@ date: 2018-03-09 15:11:05
 categories: 
 - 通用技巧
 tags:
+- common
 ---
 ## 1.Google了一下，貌似 circumvention technonogy 是翻墙的学名
 
