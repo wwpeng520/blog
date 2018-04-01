@@ -61,8 +61,8 @@ root@后面的是你购买的 VPS 服务器 IP 地址（IP 地址和密码一般
 
 根据操作系统下载相应的客户端
 
-- [Mac 版客户端下载](https://sourceforge.net/projects/shadowsocksgui)
-- [Win 版客户端下载](https://github.com/shadowsocks/shadowsocks-windows/releases)
+- [Mac 版客户端下载](https://github.com/shadowsocks/ShadowsocksX-NG/releases/)
+- [Win 版客户端下载](https://sourceforge.net/projects/shadowsocksgui)
 
 推荐使用 brew 安装，可以参考[这篇文章](https://shino.space/2017/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BAshadowsocks%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E7%B3%BB%E7%BB%9F-%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%AF%87/)
 
