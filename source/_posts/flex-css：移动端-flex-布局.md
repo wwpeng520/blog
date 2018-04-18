@@ -10,7 +10,6 @@ tags:
 ## 什么是 flex.css
 
 css3 flex 布局相信很多人已经听说过甚至已经在开发中使用过它，flex.css 就是对 flex 布局的一种封装，通过简洁的属性设置就能使得它完美的运行在移动端的各种浏览器，甚至能运行在 ie10+ 的各种PC端浏览器中。它天然的能够很好的将页面布局和css进行分离，让 css 专注于元素的显示效果，我称之为声明式布局。
-[github地址](https://github.com/lzxb/flex.css)
 
 ## 为什么需要 flex.css
 
