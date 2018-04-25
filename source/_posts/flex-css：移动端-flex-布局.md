@@ -100,3 +100,7 @@ flex-box属性说明:
   <div flex-box="0" style="background: blue; width: 50px; height: 50px">3</div>
 </div>
 ```
+
+参考文章
+
+- [flex.css：移动端 flex 布局神器](https://blog.csdn.net/zhanglongdream/article/details/53957876)
