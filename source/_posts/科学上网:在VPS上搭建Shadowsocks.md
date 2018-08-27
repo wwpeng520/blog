@@ -40,7 +40,21 @@ root@后面的是你购买的 VPS 服务器 IP 地址（IP 地址和密码一般
 每次都需要输入一串奇形怪状的密码是不是很麻烦，在上一步提到了添加 SSH Key 的方式，如果添加成功了，以后每次登录只需输入
 > ssh root@45.xxx.xxx.xxx
 
-直接登录而不需要密码了。方法自行谷歌吧。
+直接登录而不需要密码了。这里提供一种将本机 SSH Key 上传到服务器的方法：
+1 登录服务器后，在 VPS 的默认目录（/root）下面新建文件夹 .ssh
+
+```bash
+mkdir ~/.ssh
+```
+
+2 进入 .ssh 目录，执行 vi 命令新建 authorized_keys 文件
+
+```bash
+cd ~/.ssh
+vi authorized_keys
+```
+
+3 将本机 ～/.ssh/id_rsa.pub 文件中的内容粘贴到 authorized_keys 文件中，保存退出，之后就可以实现免密登陆。
 
 ## 3. VPS 上部署 Shadowsocks
 
