@@ -57,8 +57,17 @@ return sequelize.transaction().then(function (t) {
 使用 ES6 的语法如下：
 
 ```bash
-await this.ctx.model.transaction(async (transaction) => {
+let transaction;
+try {
+  transaction = await this.ctx.model.transaction();
   await this.service.xxx.xxx(parms, transaction);
   await this.service.xxx.xxx(parms1, parms2, transaction);
-})
+  await transaction.commit();
+
+  return true
+} catch (e) {
+  await transaction.rollback();
+
+  return false
+}
 ```
