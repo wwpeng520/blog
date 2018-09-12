@@ -12,6 +12,7 @@ adb shell dumpsys package <package_name>  //获取全部信息
 adb shell dumpsys package <package_name> | grep XXX //获取XXX信息
 ```
 
+<!-- more -->
 ![查看微博相关信息](/images/adb/weibo.png)
 
 ![查看微博版本](/images/adb/weibo_version.png)
