@@ -17,7 +17,7 @@ tags:
 ListEmptyComponent 表示 FlatList 没有数据的时候填充的布局，一般情况我们会在列表没有数据时显示一个提示信息，比如提示错误、下拉刷新或者暂无数据等。
 <!-- more -->
 
-```bash
+```typescript
 ListEmptyComponent={() => {
   if (error) {
     return (
@@ -45,13 +45,11 @@ ListEmptyComponent={() => {
 
 通过以上的说明，我们知道 onLayout 是动态计算的，实际上也是如此：iOS ListEmptyComponent 渲染时 onLayout 还没有回调。所以我们需要使用 state 变量保存我们需要的高度值。
 
-```bash
-onLayout={e => this.setState({ flatlistHeight: e.nativeEvent.layout.height })}
-```
+``onLayout={e => this.setState({ flatlistHeight: e.nativeEvent.layout.height })}``
 
 这样设置后应该完美了吧，可是....在 Android 上能完美实现我们要的效果，在 iOS 上出现了来回闪屏的的问题。打印日志发现值一直是0和测量后的数值来回变化。所以修改 onLayout 如下：
 
-```bash
+```typescript
 onLayout={e => {
   let height = e.nativeEvent.layout.height;
   if (this.state.flatlistHeight < height) {

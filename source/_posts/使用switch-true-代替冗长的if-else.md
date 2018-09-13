@@ -7,7 +7,7 @@ tags:
 
 今天偶然看到 switch(true) 的写法，第一感觉是有点奇怪，细细一想，发觉这个写法很妙，先上代码：
 
-```bash
+```javascript
 var num = 25;
 switch (true) {
     case num < 0:
@@ -27,7 +27,7 @@ switch (true) {
 <!-- more -->
 一般我们的写法都是如下所示。我们根据 expression 的值等于哪个值是做相应的操作，然后跳出 switch 语句。(此时 expression 的值都是确定的几个值)。switch 语句中的每一种情形（case）的含义是：“如果表达式（expression）等于这个值（value），则执行后面的语句（statement）”。这里的表达式我们会习惯性的认为是一个确定的值，而遇到不确定值或者一个取值范围时好像不适用了（其实不是的）。
 
-```bash
+```javascript
 switch (expression) {
     case value: statement
         break;

@@ -18,7 +18,7 @@ styled-components 是一个常用的很适合 React 技术栈的项目开发的 
 安装并引入 styled-components 后，提取公共组件，提高组件复用，也可减少很多代码。可以把常用的组件提取到一个公共组件上，然后同时到处，按需引入到各个页面，也可以把一个组件报存为一个组件，视情况而定。
 参考官方文档和各个教程示例编写公共组件 base.tsx 如下
 
-```bash
+```javascript
 import * as React from "react";
 import styled from 'styled-components';
 
@@ -52,7 +52,7 @@ export const BSmallText = styled.span`
 
 根据报错提示，可以在 props 处增加定义，如
 
-```bash
+```javascript
 export const BTitle = styled.p`
   font-size: 13px;
   line-height: 18px;
@@ -62,7 +62,7 @@ export const BTitle = styled.p`
 
 最后代码如下：
 
-```bash
+```javascript
 import * as React from "react";
 import styled from 'styled-components';
 

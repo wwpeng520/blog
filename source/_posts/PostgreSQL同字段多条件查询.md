@@ -18,7 +18,7 @@ tags:
 <!-- more -->
 代码如下：
 
-```bash
+```typescript
 import * as qiniu from 'qiniu';
 import * as moment from "moment";
 const request = require('request');
@@ -76,7 +76,7 @@ async upload_files(urls: IUploadRetrun[], type: string, token?: string) {
 
 因为我的项目使用的是 egg + egg-sequelize(ORM) 的形式，数据库是 PostgreSQL，所以查询的时候我一开始的想法是使用 sequelize 提供的方法，特意查看了一下文档，期望的代码如下：
 
-```bash
+```typescript
 let results = await this.app.model.Xxxx.findAll({
     where: {
         image: {
@@ -88,7 +88,7 @@ let results = await this.app.model.Xxxx.findAll({
 
 但是 ts 一直在报错，索性就用 SQL 查询来做了，以下三种方式测试都是可用的。推荐使用第一种方式，语义明确，代码也最简练，第三张是最笨的方法，只需要把所有的约束用 AND 连接就好了。
 
-```bash
+```sql
 SELECT id,image AS url FROM table1 WHERE image NOT SIMILAR TO 'http://(cdn.aaa.com|cdn.bbb.com|cdn.ccc.com)%' ORDER BY id LIMIT 10
 
 SELECT id,image AS url FROM table1 WHERE NOT image LIKE ANY (ARRAY['http://cdn.aaa.com%', 'http://cdn.bbb.com%', 'http://cdn.ccc.com%']) ORDER BY id LIMIT 10
@@ -98,7 +98,7 @@ SELECT id,image AS url FROM table1 WHERE (image NOT LIKE 'http://cdn.aaa.com%' A
 
 查找并替换图片地址完整代码如下：
 
-```bash
+```typescript
 // 查找并替换图片地址
 async renew_images(count = 10) {
     let sql = `SELECT id,image AS url FROM table1 WHERE image NOT SIMILAR TO '(${CONTANTS.IMAGE_WHITE_LIST.join("|")})%' ORDER BY id LIMIT ${count}`;

@@ -15,7 +15,7 @@ tags:
 项目使用的是 Egg+egg-sequelize 模式，查阅了一下 sequelize 的[官方文档](http://sequelize.readthedocs.io/en/v3/docs/transactions/)，使用方法如下：
 <!-- more -->
 
-```bash
+```typescript
 // 受管理的事务（auto-callback）
 return sequelize.transaction(function (t) {
   // 要确保所有的查询链都有return返回
@@ -56,7 +56,7 @@ return sequelize.transaction().then(function (t) {
 
 使用 ES6 的语法如下：
 
-```bash
+```typescript
 let transaction;
 try {
   transaction = await this.ctx.model.transaction();

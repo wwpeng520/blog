@@ -2,7 +2,7 @@
 title: node.js下载图片和上传cdn(七牛)
 date: 2018-09-12 15:43:53
 tags:
-  - node.js
+- node.js
 ---
 
 项目中有时需要使用第三方到图片，但是如果直接引用第三方到 url，我们将面临一些风险：第一，我们无法保证该地址长期有效；第二，网页中加载该 url 可能无法显示，因为对方很可能做了防盗链处理，这个问题在浏览器端有这个限制但是在后端就没有这个问题了。
@@ -12,7 +12,7 @@ tags:
 
 首先，我们可能需要先下载需要到网络图片，先来个基础到方法：
 
-```bash
+```typescript
 const request = require('request');
 const fs = require('fs');
 const path = require('path');
@@ -41,7 +41,7 @@ function downloadUrl(url: string, outputPath: string) {
 
 如果我们需要把该图片上传到 cdn 上时，我们可以直接传可读 stream（ let readableStream = request(url) ），可以简化下载图片到服务器 - 上传图片到cdn - 删除临时图片这个过程。这里以七牛为例，需要安装 [qiniu](https://github.com/qiniu/nodejs-sdk) 的库。
 
-```bash
+```typescript
 const request = require('request');
 const fs = require('fs');
 const path = require('path');
@@ -90,7 +90,7 @@ export async function upload2CDN(url) {
 
 以上方法只能单次处理一张图片，需要处理多张图片时代码可以参考下面到代码：
 
-```bash
+```typescript
 import * as qiniu from 'qiniu';
 const config: any = new qiniu.conf.Config();
 config.zone = qiniu.zone.Zone_z2;

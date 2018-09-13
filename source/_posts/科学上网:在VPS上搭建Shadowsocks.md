@@ -63,9 +63,9 @@ vi authorized_keys
 以下是3条命令，每次输入一行、回车，等待屏幕上的操作完成后再输入下一条。
 
 ```bash
-1 wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh
-2 chmod +x shadowsocks.sh
-3 ./shadowsocks.sh 2>&1 | tee shadowsocks.log
+wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh
+chmod +x shadowsocks.sh
+./shadowsocks.sh 2>&1 | tee shadowsocks.log
 ```
 
 最后一步输完，终端会显示信息要你为 Shadowsocks 服务设置一个个人密码和端口号（1-65535间都行），这里不知道或者无所谓的话可以直接回车，结束后就会看到你的 Shadowsocks 的配置信息，最好截屏下来保存以防以后需要。

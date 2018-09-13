@@ -9,7 +9,7 @@ tags:
 
 SQL HAVING 语法：
 
-```bash
+```sql
 SELECT column_name, aggregate_function(column_name)
 FROM table_name
 WHERE column_name operator value
@@ -36,7 +36,7 @@ HAVING 是一个过滤声明，是在查询返回结果集以后对查询结果�
 ![Orders](/images/sql/Orders表.png)
 现在，我们希望查找订单总金额少于 2000 的客户。
 
-```bash
+```sql
 SELECT Customer,SUM(OrderPrice) FROM Orders
 GROUP BY Customer
 HAVING SUM(OrderPrice)<2000
@@ -47,7 +47,7 @@ HAVING SUM(OrderPrice)<2000
 
 现在我们希望查找客户 "Bush" 或 "Adams" 拥有超过 1500 的订单总金额。
 
-```bash
+```sql
 SELECT Customer,SUM(OrderPrice) FROM Orders
 WHERE Customer='Bush' OR Customer='Adams'
 GROUP BY Customer

@@ -20,7 +20,7 @@ tags:
 
 被懒加载搞得有点头大时，在GitHub上看到一个讨论懒加载的issue，下面有人提供了一个解决方案（判断当前页面是否处于激活状态）：点击底部菜单时调用tabBarOnPress方法跳转到该页面，并在该页面调用componentWillReceiveProps方法判断当前页面设置的tabname与nextProps中的tabname是否相同（当前页面处于激活状态），相同的话则加载该页面数据等操作，从而实现页面的懒加载。该[issue](https://github.com/react-navigation/react-navigation/issues/2961)地址<https://github.com/react-navigation/react-navigation/issues/2961>
 
-```bash
+```javascript
 import * as actions from "yourprojectname/src/redux/actions";
 import { connect } from "react-redux";
 

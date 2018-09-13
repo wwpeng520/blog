@@ -5,8 +5,6 @@ tags:
 - 前端技术
 - 常用插件
 ---
-# flex.css 快速布局
-
 ## 什么是 flex.css
 
 css3 flex 布局相信很多人已经听说过甚至已经在开发中使用过它，flex.css 就是对 flex 布局的一种封装，通过简洁的属性设置就能使得它完美的运行在移动端的各种浏览器，甚至能运行在 ie10+ 的各种PC端浏览器中。它天然的能够很好的将页面布局和css进行分离，让 css 专注于元素的显示效果，我称之为声明式布局。
@@ -37,7 +35,7 @@ flex.css 有两个版本，一个是 flex.css，一个是 data-flex.css，这两
 
 ### 引入
 
-```bash
+```css
 import 'flex.css';
 or
 import 'flex.css/dist/data-flex.css';
@@ -47,7 +45,7 @@ import 'flex.css/dist/data-flex.css';
 
 ### 直接在元素上添加属性，示例如下：
 
-```bash
+```html
 <!-- flex属性匹配，简单的子元素居中例子： -->
 <div flex="main:center cross:center" style="width:500px; height: 500px; background: #108423">
   <div style="background: #fff">看看我是不是居中的</div>
@@ -92,7 +90,7 @@ flex-box属性说明:
 取值范围(0-10)，单独设置子元素多余空间的如何分配，设置为0，则子元素不占用多余的多余空间
 多余空间分配 = 当前 flex-box 值/子元素的 flex-box 值相加之和
 
-```bash
+```html
 <h2>两端不需要多余空间，中间占满剩余空间</h2>
 <div class="box" flex>
   <div flex-box="0" style="background: gold; width: 50px; height: 50px">1</div>
