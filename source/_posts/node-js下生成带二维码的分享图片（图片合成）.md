@@ -33,8 +33,8 @@ export async function createQRCodeToFile(
   path: string,
   url: string,
   option?: any
-) {
-  return new Promise((resolve, reject) => {
+): Promise<boolean> {
+  return new Promise<boolean>((resolve, reject) => {
     QRCode.toFile(path, url, option || {}, function(err) {
       if (!err) {
         console.log("done!");
@@ -122,8 +122,8 @@ export async function composeLocalImages(
   qrcode: string,
   params: string,
   outputPath: string
-) {
-  return new Promise((resolve, reject) => {
+): Promise<boolean> {
+  return new Promise<boolean>((resolve, reject) => {
     gm(bgImage)
       .draw(`${params} "${qrcode}"`)
       .write(outputPath, function(err) {
