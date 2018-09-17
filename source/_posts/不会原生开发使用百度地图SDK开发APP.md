@@ -2,6 +2,7 @@
 title: 不会原生开发使用百度地图SDK开发APP
 date: 2018-09-16 22:25:08
 tags:
+- react-native
 ---
 
 众所周知，一般大的互联网平台都会提供官方 SDK 或者 API 提供给开发者使用。这里介绍自己在移动 APP 中使用百度地图 SDK 和 API 的方式查询信息的一次过程。
@@ -48,7 +49,17 @@ tags:
 <uses-permission android:name="android.permission.GET_TASKS" />
 ```
 
-iOS 编译问题：这里不做过多说明，[这篇文章](https://www.jianshu.com/p/fd8f24eb5b5c)介绍等比较详细，如果编译还有问题，不妨在 issue 和简书上搜索看看。
+4.打包后播放异常，确认是否在 android/app/proguard-rules.pro 下加入以下规则
+
+`-keep class com.baidu.** { *; }
+-keep class vi.com.** { *; }
+-dontwarn com.baidu.**`
+
+iOS 编译问题：
+1.将RCTBaiduMap.xcodeproj/BaseModule.h里的 #import "RCTBridgeModule.h" 替换为 #import <React/RCTBridgeModule.h>
+2.将 RCTBaiduMap.xcodeproj/RCTBaiduMapView.h 里的 #import "RCTViewManager.h"和#import "RCTConvert+CoreLocation.h" 替换为 #import <React/RCTViewManager.h>和 #import <React/RCTConvert+CoreLocation.h>
+
+其他不做过多说明，[这篇文章](https://www.jianshu.com/p/fd8f24eb5b5c)介绍等比较详细，如果编译还有问题，不妨在 issue 和简书上搜索看看。
 
 ## 申请 KEY
 
