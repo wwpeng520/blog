@@ -96,7 +96,7 @@ deploy:
   type: git
   repo: git@45.76.74.34:/data/blog/git/blog.git # 此部分修改为你自己的登陆账号和域名，冒号后面为设置的裸仓库的地址
   # repo: git@2001:19f0:7001:3f7f:5400:01ff:fea6:69fa:/data//workspace/blog/hexo.git # 此部分修改为你自己的登陆账号和域名，冒号后面为设置的裸仓库的地址
-  # branch: master
+  branch: master
 
 # hexo-admin authentification
 # admin:
