@@ -13,6 +13,7 @@ tags:
 买的 VPN 是 [vultr](https://www.vultr.com) 的，Ubuntu 系统。
 
 在Ubuntu系统上安装nodejs有很多种方法，分别为：apt-get在线安装，下载Node.js源码自己编译安装，下载编译好的文件，使用npm安装等方式。推荐通过源码编译安装。
+<!-- more -->
 
 1. 登录 VPN
 
