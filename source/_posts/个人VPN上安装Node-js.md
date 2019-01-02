@@ -60,3 +60,50 @@ sudo make install
 ```
 
 最后一步可能需要等待较长时间。
+
+5. 卸载
+
+这里只介绍使用源码编译安装的卸载方式。编译用的源码文件夹的话 cd 进去之后执行
+
+```bash
+sudo make uninstall
+```
+
+不在的话可以再下一个同版本的 Node 源码，解压后依次执行：
+
+```bash
+make
+sudo make uninstall
+```
+
+6. 使用 nvm 管理 Node 版本
+
+nvm 是管理 Node.js 版本的工具，它支持在多个 Node.js 版本间切换。
+
+```bash
+# 安装
+git clone https://github.com/creationix/nvm.git ~/.nvm
+cd ~/.nvm
+git checkout `git describe --abbrev=0 --tags`
+
+# 激活
+. ~/.nvm/nvm.sh
+```
+
+为了每次登录后自动激活 nvm，需要将 NMV_DIR、nvm.sh 补齐加入 bash 的 ~/.bashrc（或 zsh 的 ~/.zshrc）
+
+```bash
+vim ~/.bashrc
+```
+
+```bashrc
+# 加上
+export NVM_DIR=~/.nvm
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+[ -r $NVM_DIR/bash_completion ] && . $NVM_DIR/bash_completion
+```
+
+```bash
+# 配置生效
+source ~/.bashrc
+```
