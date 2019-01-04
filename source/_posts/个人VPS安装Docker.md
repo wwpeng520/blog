@@ -8,7 +8,7 @@ tags:
 - VPS
 ---
 题记：服务器部署很少涉及，虽然买了几个 VPS 玩玩，但作用一般也就部署个 Hexo 个人博客和配置个 ShadowSocks 翻墙用用。最近想做个小程序玩玩，前后端都自己来写，服务器端需要部署到 VPS，很多东西以前大致摸索过一些，只是用的少，很多步骤需要边 Google 边操作。所以一些过程打算自己记录下来，以供以后翻阅。
-VPS 是Ubuntu 系统。
+VPS 是 Ubuntu 系统。
 
 0. 卸载老版本
 
@@ -17,6 +17,8 @@ docker 或 docker-engine
 ```bash
 sudo apt-get remove docker docker-engine docker.io
 ```
+
+<!-- more -->
 
 1. 安装
 
@@ -61,3 +63,5 @@ sudo apt-get install docker-ce=<VERSION> # 示例：docker-ce | 18.09.0~ce-0~ubu
 ```bash
 sudo docker run hello-world
 ```
+
+[参考链接](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
