@@ -59,11 +59,14 @@ server {
 ```
 
 ```bash
-# 测试配置文件是否正确
+# 检查配置是否有误，并按照报错提示修复错误
 nginx -t
 
-# 修改了配置文件，重启服务
-nginx -s reload
+# 重启 Nginx 服务
+service nginx restart
+
+# 重新载入 Nginx 服务(或者 nginx -s reload)
+service nginx reload
 ```
 
 输入`api.abc.com`测试一下是否运行成功。
