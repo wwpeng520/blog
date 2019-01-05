@@ -73,7 +73,52 @@ service nginx restart
 service nginx reload
 ```
 
+3. 安装 SSL 证书
+
+可以考虑使用阿里云和又拍云的 SSL 证书，因为我的域名暂未注册，这里演示从 [FreeSSL.org](https://freessl.cn/) 申请的证书。
+
+输入需要申请证书的域名，点击「创建免费的SSL证书」
+![图1](/images/ssl/freessl1.png)
+
+输入邮箱地址后，点击「点击创建」
+![图2](/images/ssl/freessl2.png)
+
+上一步中选择了 DNS 验证方式，完成上一步显示如下
+![图3](/images/ssl/freessl3.png)
+
+这时需要去你的域名服务商那里添加生成的 TXT 记录名与记录值添加到该域名下，等待大约 1 分钟即可验证成功。
+![图4](/images/ssl/freessl4.png)
+
+点击图3中的「点击验证」即可看到成功了
+![图5](/images/ssl/freessl5.png)
+
+下载证书，上传到服务器上保存起来。
+然后登陆服务器修改 Nginx 配置信息，然后重启 Nginx 服务。配置信息如下：
+
+```conf
+server {
+  # 如果要保留 http 方式，可同时保留下两行
+  # listen 80;
+  listen 443 ssl;
+  server_name api.example.com;
+
+  ssl on;
+  ssl_certificate /etc/nginx/conf.d/ssl_files/full_chain.pem;
+  ssl_certificate_key /etc/nginx/conf.d/ssl_files/private.key;
+
+  location / {
+      proxy_pass http://127.0.0.1:node运行的端口;
+      proxy_http_version 1.1;
+      proxy_set_header Upgrade $http_upgrade;
+      proxy_set_header Connection 'upgrade';
+      proxy_set_header Host $host;
+      proxy_cache_bypass $http_upgrade;
+  }
+}
+```
+
 参考文章
 
 - [使用 Nginx 为 Linux 实例绑定多个域名](https://help.aliyun.com/knowledge_detail/41467.html?spm=5176.11065259.1996646101.searchclickresult.55b56d8br6gbEz)
 - [对于nginx而言，site-available与conf.d目录有什么不同的用法](http://yo.zgserver.com/nginxsite-availableconf-d.html)
+- [关于FreeSSL 申请证书的相关说明](https://blog.freessl.cn/about-freessl-org-apply-cert-introduce/)
