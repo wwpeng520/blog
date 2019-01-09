@@ -11,11 +11,15 @@ tags:
 docker ps -a
 ```
 
-`CONTAINER ID        IMAGE                                               COMMAND                 CREATED             STATUS                  PORTS                    NAMES
-e0167565bd4e        registry.docker-cn.com/sameersbn/postgresql:9.6-2   "/sbin/entrypoint.sh"   6 days ago          Up 18 minutes           0.0.0.0:5432->5432/tcp   weapp_guitar_pg
-b7e624cfc669        hello-world                                         "/hello"                9 days ago          Exited (0) 9 days ago                            reverent_lumiere`
+```
+CONTAINER ID / IMAGE / COMMAND / CREATED / STATUS / PORTS / NAMES
 
-上面的命令可以查看到本地的所有 docker 容器
+e0167565bd4e / registry.docker-cn.com/sameersbn/postgresql:9.6-2 / "/sbin/entrypoint.sh" / 6 days ago / Up 18 minutes / 0.0.0.0:5432->5432/tcp / weapp_guitar_pg
+
+b7e624cfc669 / hello-world / "/hello" / 9 days ago / Exited (0) 9 days ago / reverent_lumiere```
+
+上面的命令可以查看到本地的所有 docker 容器：有两个 CONTAINER，ID 分别为 e0167565bd4e 和 b7e624cfc669。
+<!-- more -->
 
 ## 停止容器
 
