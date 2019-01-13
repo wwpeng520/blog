@@ -15,7 +15,7 @@ tags:
 在Ubuntu系统上安装nodejs有很多种方法，分别为：apt-get在线安装，下载Node.js源码自己编译安装，下载编译好的文件，使用npm安装等方式。推荐通过源码编译安装。
 <!-- more -->
 
-1. 登录 VPS
+## 登录 VPS
 
 使用终端命令
 
@@ -25,7 +25,7 @@ ssh root@45.xxx.xxx.xxx
 
 根据终端提示输入 VPS 的密码即可进入 VPS Ubuntu 系统。如果需要经常登录，可以在 VPS 的管理网站添加 SSH Keys，然后登录 VPS 就不需要每次去复制粘贴密码了。
 
-2. 可能需要的操作
+## 可能需要的操作
 
 用以下命令来升级系统，并且安装一些编译 Node.js 源码必要的包
 
@@ -35,7 +35,7 @@ apt-get update
 apt-get install python gcc make g++
 ```
 
-3. 下载 Node.js 源码
+## 下载 Node.js 源码
 
 进入 Node.js 官网或者中文官网下载专区，找到源码下载地址，形如 node-v10.15.0.tar.gz 的地址
 
@@ -43,7 +43,7 @@ apt-get install python gcc make g++
 wget https://npm.taobao.org/mirrors/node/v10.15.0/node-v10.15.0.tar.gz
 ```
 
-4. 解压、编译
+## 解压、编译
 
 依次执行
 
@@ -61,7 +61,7 @@ sudo make install
 
 最后一步可能需要等待较长时间。
 
-5. 卸载
+## 卸载
 
 这里只介绍使用源码编译安装的卸载方式。编译用的源码文件夹的话 cd 进去之后执行
 
@@ -76,7 +76,7 @@ make
 sudo make uninstall
 ```
 
-6. 使用 nvm 管理 Node 版本
+## 使用 nvm 管理 Node 版本
 
 nvm 是管理 Node.js 版本的工具，它支持在多个 Node.js 版本间切换。
 
@@ -106,4 +106,27 @@ export NVM_DIR=~/.nvm
 ```bash
 # 配置生效
 source ~/.bashrc
+```
+
+### nvm 常用命令
+
+```bash
+# 查看本地已安装版本
+nvm ls
+
+# 查看远程可供安装版本
+nvm ls-remote
+
+# 设置本地默认版本
+nvm alias default v11
+
+# 安装
+nvm install 11
+
+# 卸载
+nvm uninstall 11
+
+# 卸载提示`incorrect permissions on installation folder`时执行下面两命令先
+sudo chown -R 用户名 "$NVM_DIR/versions/node/版本"
+sudo chmod -R u+w "$NVM_DIR/versions/node/版本"
 ```
