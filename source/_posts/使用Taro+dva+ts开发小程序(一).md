@@ -18,6 +18,7 @@ npm install -g @tarojs/cli
 yarn global add @tarojs/cli
 ```
 
+<!-- more-->
 使用命令创建模板项目：TypeScript + Sass + 默认模板
 
 ```bash

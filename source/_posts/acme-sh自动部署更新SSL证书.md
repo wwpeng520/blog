@@ -98,7 +98,10 @@ ssl_certificate /root/.acme.sh/example.com/example.com.cer;
 ssl_certificate_key /root/.acme.sh/example.com/example.com.key;
 ```
 
-重启 Nginx
+重启 Nginx。
+需要注意的是：如果使用阿里云的云主机需要添加安全组规则，如下图：
+入口：阿里云控制台 → 云服务器 ECS → 网络和安全 → 安全组 → 配置规则 → 添加安全组规则
+![云服务器 ECS](/images/aliyun/443.png)
 
 ## 更新证书
 
