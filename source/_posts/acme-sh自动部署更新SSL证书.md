@@ -122,6 +122,23 @@ acme.sh  --upgrade  --auto-upgrade
 acme.sh --upgrade  --auto-upgrade  0
 ```
 
+## 更多配置
+
+a. 默认情况下，如果你不给 Nginx 做进一步的安全配置的话，你用 [SSLLABS](https://www.ssllabs.com/ssltest/) 来给你刚刚建立的网站来个安全测试，结果一定是这样的
+![https测试结果](/images/ssl/ssltest_b.png)
+里面有句话`This server's certificate chain is incomplete. Grade capped to B.`，意思是证书链不全。其实上面生成证书的时候生成了：fullchain.cer，example.com.cer，example.com.conf，example.com.csr，example.com.csr.conf，example.com.key 6个文件，fullchain 是完整的证书。
+
+```conf
+ssl_certificate /root/.acme.sh/example.com/fullchain.cer;
+ssl_certificate_key /root/.acme.sh/example.com/example.com.key;
+```
+
+b. 域名CAA DNS解析：在域名管理页面增加域名解析如下
+![DNS CAA解析](/images/aliyun/dns_caa.png)
+
+做完上面两个步骤之后再测试可以达到 A 了，其他优化的话有空再研究一下吧。
+![DNS CAA解析](/images/ssl/ssltest_a.png)
+
 参考文章
 
 - [轻松全站 HTTPS，还没用上 https (可申请泛域名证书)的朋友可以操练起来了](https://cnodejs.org/topic/5be29f7c21d75b74609f4fbf)
