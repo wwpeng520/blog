@@ -95,4 +95,23 @@ class App extends Component {
 }
 ```
 
+models 目录是存放 global model 的目录，models/index.ts 内容如下：
+
+```typescript
+import common from './common'
+import user from './user'
+
+export default [common, user]
+```
+
+执行以下命令开始体验：
+
+```bash
+# 调试
+npm run dev:weapp
+
+# 打包
+npm run build:weapp
+```
+
 <!-- https://github.com/EasyTuan/taro-msparis -->
