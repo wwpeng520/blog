@@ -3,9 +3,10 @@ title: Node项目部署并实现Nginx域名绑定
 date: 2019-01-04 20:44:10
 categories: 
 - Linux
+- Node.js
 tags:
 - Linux
-- Node
+- Node.js
 - Nginx
 ---
 

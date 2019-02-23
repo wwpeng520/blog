@@ -2,8 +2,8 @@
 title: PostgreSQL按日/月/周统计
 date: 2019-01-14 23:00:53
 tags:
-- PostgreSQL
 - SQL
+- 数据库
 ---
 
 先看一个 SQL 语句

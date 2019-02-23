@@ -2,11 +2,10 @@
 title: react-navigation dva 路由懒加载探讨
 date: 2018-03-09 15:37:06
 categories: 
-- React Native
+- React-Native
 tags:
-- react-native
-- react-navigation
-- dva
+- React-Native
+- DvaJS
 - 前端技术
 ---
 

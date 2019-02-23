@@ -3,7 +3,6 @@ title: 用typescript写styled-components报错一例
 date: 2018-04-25 17:08:37
 tags:
 - 前端技术
-- 常用插件
 ---
 # 小试 styled-components
 

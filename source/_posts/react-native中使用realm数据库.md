@@ -1,9 +1,11 @@
 ---
 title: react-native中使用realm数据库
 date: 2018-09-22 15:23:51
+categories: 
+- React-Native
 tags:
-  - react-native
-  - 数据库
+- React-Native
+- 数据库
 ---
 
 因为项目需要用到 APP 本地存取数据库的功能，所以采用了 [realm](https://github.com/realm/realm-js) 的方案，官方文档地址：[https://realm.io/docs/javascript/latest/](https://realm.io/docs/javascript/latest/)。

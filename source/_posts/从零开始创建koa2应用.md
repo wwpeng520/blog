@@ -1,8 +1,11 @@
 ---
 title: 从零开始创建koa2应用
 date: 2018-04-28 12:37:23
+categories: 
+- Node.js
 tags:
-- koa
+- Node.js
+- Koa.js
 ---
 
 ## 创建一个 koa2 工程

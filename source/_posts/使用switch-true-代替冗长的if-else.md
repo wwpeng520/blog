@@ -2,7 +2,7 @@
 title: 使用switch(true)代替冗长的if-else
 date: 2018-08-05 16:32:13
 tags:
-- js
+- JavaScript
 ---
 
 今天偶然看到 switch(true) 的写法，第一感觉是有点奇怪，细细一想，发觉这个写法很妙，先上代码：

@@ -3,7 +3,6 @@ title: 使用adb查看android应用信息
 date: 2018-07-15 10:38:16
 tags:
 - 前端技术
-- adb
 ---
 # adb-查看手机安装应用信息
 

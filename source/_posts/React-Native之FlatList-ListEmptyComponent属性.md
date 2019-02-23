@@ -2,9 +2,9 @@
 title: React-Native之FlatList(ListEmptyComponent属性)
 date: 2018-06-02 11:40:11
 categories: 
-- React Native
+- React-Native
 tags:
-- react-native
+- React-Native
 - 前端技术
 ---
 题记：本文不是使用教程，只探讨记录 FlatList 的 ListEmptyComponent 属性问题。

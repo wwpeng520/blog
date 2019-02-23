@@ -2,9 +2,9 @@
 title: React-Native 在安卓下多图渲染显示问题
 date: 2018-03-10 11:03:18
 categories: 
-- React Native
+- React-Native
 tags:
-- react-native
+- React-Native
 - 前端技术
 ---
 题记：这里描述个人在项目中遇到的此问题的的过程及解决方法，不一定适用所有此类现象。

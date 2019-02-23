@@ -6,7 +6,7 @@ categories:
 tags:
 - 小程序
 - Taro
-- dva
+- DvaJS
 ---
 
 ## 初始化

@@ -2,7 +2,6 @@
 title: PostgreSQL同字段多条件查询
 date: 2018-07-28 09:40:59
 tags:
-- Postgresql
 - SQL
 - 数据库
 ---

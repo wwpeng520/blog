@@ -2,9 +2,9 @@
 title: react-navigation 安卓标题居中问题
 date: 2018-05-18 14:57:44
 categories: 
-- React Native
+- React-Native
 tags:
-- react-native
+- React-Native
 - 前端技术
 ---
 

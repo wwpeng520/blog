@@ -1,8 +1,10 @@
 ---
 title: 不会原生开发使用百度地图SDK开发APP
 date: 2018-09-16 22:25:08
+categories: 
+- React-Native
 tags:
-- react-native
+- React-Native
 ---
 
 众所周知，一般大的互联网平台都会提供官方 SDK 或者 API 提供给开发者使用。这里介绍自己在移动 APP 中使用百度地图 SDK 和 API 的方式查询信息的一次过程。

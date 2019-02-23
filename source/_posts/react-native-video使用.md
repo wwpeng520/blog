@@ -1,8 +1,10 @@
 ---
 title: react-native-video使用
 date: 2018-09-17 12:50:52
+categories: 
+- React-Native
 tags:
-- react-native
+- React-Native
 ---
 react-native APP 需要播放视频功能，这里选用 [react-native-video](https://github.com/react-native-community/react-native-video) 库，这个库在 [GitHub](https://github.com) 上有 3k+ 的星。
 <!-- more -->

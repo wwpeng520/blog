@@ -3,6 +3,7 @@ title: 个人VPS上安装Node.js
 date: 2018-12-29 16:10:45
 categories: 
 - Linux
+- Node.js
 tags:
 - Linux
 - VPS
@@ -35,6 +36,7 @@ apt-get update
 apt-get install python gcc make g++
 ```
 
+方式一：源码安装
 ## 下载 Node.js 源码
 
 进入 Node.js 官网或者中文官网下载专区，找到源码下载地址，形如 node-v10.15.0.tar.gz 的地址
@@ -75,6 +77,8 @@ sudo make uninstall
 make
 sudo make uninstall
 ```
+
+方式二：使用 nvm 安装
 
 ## 使用 nvm 管理 Node 版本
 

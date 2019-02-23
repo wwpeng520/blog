@@ -1,8 +1,10 @@
 ---
 title: react-native报错'config.h' file not found
 date: 2018-10-18 17:15:54
+categories: 
+- React-Native
 tags:
-- react-native
+- React-Native
 ---
 react-native 有时安装新的库或者删除 node_modules/* 重新安装依赖后执行 react-native run-ios 命令时报错 `'config.h' file not found`。使用 XCode 执行如下：
 

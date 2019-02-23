@@ -1,8 +1,10 @@
 ---
 title: 简单使用react-native的Animated动画
 date: 2018-09-09 12:47:04
+categories: 
+- React-Native
 tags:
-- react-native
+- React-Native
 ---
 
 在项目中简单使用了 react-native 的 Animated 动画，这里介绍项目中使用到的两种场景。

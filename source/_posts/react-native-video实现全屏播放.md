@@ -1,8 +1,10 @@
 ---
 title: react-native-video实现全屏播放
 date: 2018-09-21 14:14:31
+categories: 
+- React-Native
 tags:
-  - react-native
+- React-Native
 ---
 
 [react-native-video](https://github.com/react-native-community/react-native-video) 有全屏播放的方法 [presentFullscreenPlayer](https://github.com/react-native-community/react-native-video#presentfullscreenplayer)，但是使用的时候发现在安卓上全屏方法不好使，虽然可以人为的控制播放窗口大小为全屏，视频是能播放了，但发现没有可以控制播放的组件（暂停/播放按钮，进度条等）。仔细看文档发现有这段说明：

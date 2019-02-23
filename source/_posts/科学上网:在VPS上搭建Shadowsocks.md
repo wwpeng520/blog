@@ -1,10 +1,7 @@
 ---
 title: 科学上网：在 Vultr VPS 上搭建 Shadowsocks
 date: 2018-03-14 15:11:05
-categories: 
-- 通用技巧
 tags:
-- common
 ---
 题记：网上此类详细教程有很多，我只根据个人需要捡几个重点记录下来。
 
