@@ -1479,6 +1479,7 @@ hexo-bunyan@^1.0.0:
 hexo-cli@^1.1.0:
   version "1.1.0"
   resolved "http://registry.npm.taobao.org/hexo-cli/download/hexo-cli-1.1.0.tgz#496d238d4646dbfd1cf047b6dc5271bfb5cb798f"
+  integrity sha1-SW0jjUZG2/0c8Ee23FJxv7XLeY8=
   dependencies:
     abbrev "^1.0.7"
     bluebird "^3.4.0"
