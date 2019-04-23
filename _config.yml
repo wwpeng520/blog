@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Bence 的博客
+title: Beat 的博客
 subtitle: 活到老，学到老
 description: 个人博客，技术文章，前端工程师
-author: Bence
+author: Beat
 keywords: "前端,js,jquery,javascript,html5,开发者,程序猿,极客,编程,代码,IT网站,Developer,Programmer,Coder,Geek,html,css,css3"
 language: Chinese
 timezone:
@@ -94,9 +94,8 @@ exclude_generator:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@47.111.3.124:/data/blog/git/blog.git # aliyun
-  # repo: git@45.76.74.34:/data/blog/git/blog.git
-  # repo: git@144.202.6.249:/data/blog/git/blog.git # 此部分修改为你自己的登陆账号和域名，冒号后面为设置的裸仓库的地址
+  # repo: git@47.111.3.124:/data/blog/git/blog.git # aliyun
+  repo: git@144.202.6.249:/data/blog/git/blog.git # 此部分修改为你自己的登陆账号和域名，冒号后面为设置的裸仓库的地址
   branch: master
 
 # hexo-admin authentification

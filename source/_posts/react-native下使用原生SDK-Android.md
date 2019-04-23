@@ -50,7 +50,7 @@ public class ZendeskChatModule extends ReactContextBaseJavaModule {
 
   @Override
   public String getName() {
-      return "ZendeskChat";
+      return "zendeskchat";
   }
 
   @ReactMethod
@@ -211,8 +211,10 @@ ZendeskChat && ZendeskChat.startZopimChat(visitorInfo);
     <style name="ZopimChatTheme" parent="AppTheme">
         <!--Chat UI uses the toolbar so no need to show ActionBar-->
         <item name="windowActionBar">false</item>
-        <item name="colorPrimary">#4285F4</item>
-        <item name="colorPrimaryDark">#3376D6</item>
+        <!-- 聊天窗口顶部标题栏 #0f2947 #4285F4 -->
+        <item name="colorPrimary">#0f2947</item>
+        <!-- 聊天窗口顶部状态栏 #031121 #3376D6 -->
+        <item name="colorPrimaryDark">#031121</item>
         <item name="colorAccent">#DB4537</item>
     </style>
 
@@ -227,6 +229,15 @@ ZendeskChat && ZendeskChat.startZopimChat(visitorInfo);
         <item name="colorPrimaryDark">#448844</item>
         <item name="colorAccent">#DDDD00</item>
     </style>
+
+    <!--Customize not agents button-->
+    <style name="no_agents_button">
+        <item name="android:background">#0ab0d9</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <color name="chat_bubble_visitor">#025E73</color>
 
 </resources>
 ```
