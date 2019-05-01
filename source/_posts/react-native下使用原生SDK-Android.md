@@ -7,6 +7,7 @@ tags:
 - React-Native
 ---
 项目中需要接入国外的一款客服系统（Zendesk Chat），使用 Web 版打开在线客服体验不好，等待时间需要10秒左右，难以接受，所以周末试着接入原生 SDK。先从安卓版 SDK 开始，SDK 文档在[这里](https://developer.zendesk.com/embeddables/docs/android-chat-sdk/introduction)。
+<!-- more -->
 
 ## 安卓 SDK
 
