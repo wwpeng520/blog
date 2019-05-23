@@ -14,10 +14,9 @@ APP 开发，后台（Node.js）需要生成带有二维码的分享图片，底
 1. 生成二维码
 2. 合成图片
 3. 上传图片至 cdn
+<!-- more -->
 
 需要用到工具：[node-qrcode](https://github.com/soldair/node-qrcode#qr-code-options), [gm](https://github.com/aheckmann/gm), [qiniu](https://github.com/qiniu/nodejs-sdk)
-
-<!-- more -->
 
 ## 生成二维码
 

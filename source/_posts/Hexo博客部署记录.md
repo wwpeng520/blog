@@ -11,6 +11,7 @@ tags:
 题记：服务器部署很少涉及，虽然买了几个 VPS 玩玩，但作用一般也就部署个 Hexo 个人博客和配置个 ShadowSocks 翻墙用用。最近想做个小程序玩玩，前后端都自己来写，服务器端需要部署到 VPS，很多东西以前大致摸索过一些，只是用的少，很多步骤需要边 Google 边操作。所以一些过程打算自己记录下来，以供以后翻阅。
 
 VPS 是 [vultr](https://www.vultr.com) 的 Ubuntu 系统。
+<!-- more -->
 
 1. 安装 git 和 nginx
 
@@ -18,8 +19,6 @@ VPS 是 [vultr](https://www.vultr.com) 的 Ubuntu 系统。
 apt-get update
 apt-get install git-core nginx
 ```
-
-<!-- more -->
 
 2. 配置 Nginx
 

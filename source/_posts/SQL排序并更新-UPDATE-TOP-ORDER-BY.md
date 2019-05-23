@@ -10,8 +10,9 @@ tags:
 ```sql
 UPDATE Proxies SET count=count+1 WHERE count<10 ORDER BY createdAt ASC LIMIT 1;
 ```
+<!-- more -->
 
-现实是骨干的，运行发现报错了，提示更新不能与 ORDER BY 一起使用。
+现实是骨感的，运行发现报错了，提示更新不能与 ORDER BY 一起使用。
 解决方案：
 
 ```sql

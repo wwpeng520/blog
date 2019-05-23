@@ -36,9 +36,11 @@ maven { url 'https://dl.bintray.com/umsdk/release' }
 在 android/app/build.gradle 配置脚本 dependencies 段中添加基础组件库和统计 SDK 库依赖：
 
 ```gradle
-compile 'com.umeng.umsdk:analytics:8.0.0'
-compile 'com.umeng.umsdk:common:2.0.1'
-compile 'com.umeng.umsdk:utdid:1.1.5.3'
+dependencies {
+  compile 'com.umeng.umsdk:analytics:8.0.0'
+  compile 'com.umeng.umsdk:common:2.0.1'
+  compile 'com.umeng.umsdk:utdid:1.1.5.3'
+}
 ```
 
 ### 桥接文件
