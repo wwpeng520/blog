@@ -50,3 +50,51 @@ yarn add -D jetifier
 npx jetify
 yarn react-native run-android
 ```
+
+附A：react-native-vector-icons 图标不显示问题（报红）解决
+
+iOS: ios/[projectname]/info.plist 文件加上
+
+```plist
+<key>UIAppFonts</key>
+<array>
+  <string>AntDesign.ttf</string>
+  <string>Entypo.ttf</string>
+  <string>EvilIcons.ttf</string>
+  <string>Feather.ttf</string>
+  <string>FontAwesome.ttf</string>
+  <string>FontAwesome5_Brands.ttf</string>
+  <string>FontAwesome5_Regular.ttf</string>
+  <string>FontAwesome5_Solid.ttf</string>
+  <string>Foundation.ttf</string>
+  <string>Ionicons.ttf</string>
+  <string>MaterialCommunityIcons.ttf</string>
+  <string>MaterialIcons.ttf</string>
+  <string>Octicons.ttf</string>
+  <string>SimpleLineIcons.ttf</string>
+  <string>Zocial.ttf</string>
+</array>
+```
+
+Android: android/app/build.gradle 文件添加
+
+```gradle
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+```
+
+附B：@ant-design/react-native 图标（引入 @ant-design/icons-react-native ）不显示问题（报红）解决
+方法一、
+
+a. 把 node_modules/@ant-design/icons-react-native/fonts 目录下的 antfill.ttf 和 antoutline.ttf 添加到 Xcode -> Resources folder 目录下
+b. ios/[projectname]/info.plist 文件加上
+
+```plist
+<key>UIAppFonts</key>
+<array>
+  <string>antfill.ttf</string>
+  <string>antoutline.ttf</string>
+</array>
+```
+
+方法二、
+运行 react-native link @ant-design/icons-react-native 如果不行可在 package.json dependencies 中添加 "@ant-design/icons-react-native": "^1.0.2"，然后执行 link。

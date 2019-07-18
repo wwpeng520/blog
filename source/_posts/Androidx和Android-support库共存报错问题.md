@@ -27,4 +27,12 @@ See http://g.co/androidstudio/manifest-merger for more information about the man
 这里发现是 react-native-device-info 库的问题，升级到新版本就可以解决了。
 
 其他解决方案：
-转换成 Androidx。这里不做展示了，可以参考[这篇文章](https://www.jianshu.com/p/f7a7a8765294)。
+转换成 Androidx。可以使用 [jetifier](https://github.com/mikehardy/jetifier) 库支持 AndroidX，这个工具提供了一个临时解决方案。
+
+使用如下：
+
+```bash
+yarn add -D jetifier
+npx jetify
+yarn react-native run-android
+```
