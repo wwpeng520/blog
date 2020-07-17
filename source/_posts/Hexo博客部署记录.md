@@ -88,7 +88,7 @@ chmod +x hooks/post-receive
 sudo adduser git
 
 # 改变 blog.git 目录的拥有者为 git 用户
-sudo chown -R git:git blog.git
+cd ../ && sudo chown -R git:git blog.git
 
 sudo chown -R git:git /var/www/blog
 ```
